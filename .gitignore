@@ -21,3 +21,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Ignore all in target
+/target/*
+
+# Except for /target/site/jacoco
+!/target/site/
+!/target/site/jacoco/
+!/target/site/jacoco/**
+
+# Ignore all in .idea
+/.idea/

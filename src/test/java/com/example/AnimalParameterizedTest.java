@@ -39,7 +39,7 @@ class AnimalParameterizedTest {
 
     @ParameterizedTest(name = "getFood with '{0}' returns Exception")
     @MethodSource("invalidAnimalKindProvider")
-    void getFoodWithInvalidParams(String animalKind) throws Exception {
+    void getFoodWithInvalidParams(String animalKind) {
         Exception exception = assertThrows(Exception.class, () -> animal.getFood(animalKind));
         String expectedExceptionMessage = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         assertEquals(expectedExceptionMessage, exception.getMessage());
